@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Lista de Posts</title>
+</head>
+<body>
+<h1>Posts del Blog</h1>
+<ul>
+{% for post in posts %}
+<li><strong>{{ post.titulo }}</strong> -
+Controlador (View)
+
+return render(request, "blog/lista.html", {"posts": posts})
+
+Rutas (URLs)
+
+path("", views.lista_posts, name="lista_posts"),
+
+agrega:
+
+path('', lambda request: redirect('blog/')), # redirige la raíz al blog
+
+blog/templates/blog/lista.html:
+
+- {{ post.contenido }}</li>{% endfor %}
+</ul>
+</body>
+</html>
